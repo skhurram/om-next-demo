@@ -13,4 +13,4 @@
      :output-to "resources/public/js/app.js"}
     shared-opts))
 
-(repl/repl* (browser/repl-env :host-port 8082) shared-opts)
+(repl/repl* (browser/repl-env :host-port 8081) shared-opts)
