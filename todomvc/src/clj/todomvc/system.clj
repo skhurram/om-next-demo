@@ -1,7 +1,8 @@
 (ns todomvc.system
   (:require [com.stuartsierra.component :as component]
             todomvc.server
-            [todomvc.datomic :as todomvc]))
+            [todomvc.datomic :as todomvc]
+            [todomvc.parser :as parser]))
 
 (defn dev-system [config-options]
   (let [{:keys [db-uri web-port]} config-options]
@@ -37,6 +38,6 @@
 
   (def db (d/db conn))
 
-  (todomvc/todos db
+  (parser/todos db
     [:db/id :todo/created :todo/title :todo/completed])
 )
