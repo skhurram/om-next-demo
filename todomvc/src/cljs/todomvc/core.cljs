@@ -9,6 +9,8 @@
   (:import [goog History]
            [goog.history EventType]))
 
+(enable-console-print!)
+
 ;; -----------------------------------------------------------------------------
 ;; Components
 
